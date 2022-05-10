@@ -91,6 +91,7 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
+//error reads arr.push not a function
 const addValues = (arr, value) => {
   // Solution code here...
   arr.push(value);
@@ -125,6 +126,12 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  // let items = [];
+
+  // availableItems.forEach((available = true) =>
+  //   items.push(availableItems);
+  // )
+  // return items;
 };
 
 /* ------------------------------------------------------------------------------------------------

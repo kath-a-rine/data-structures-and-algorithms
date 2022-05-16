@@ -1,5 +1,7 @@
 'use strict';
 
+const { attr } = require("cheerio/lib/api/attributes");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -113,9 +115,11 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.reduce((a, b) => {
+    a.push(b.name);
+    return a;
+  }, []);
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -125,9 +129,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  return str.split('').reduce((a, b) => b + a, '');
 };
 
+// Split method from https://attacomsian.com/blog/string-reverse-javascript
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
@@ -178,7 +183,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  // return arr.reduce((a, b) => {
+  //   a.push(b.children);
+  //   return a;
+  // }, []);
+
+  // return childArr.reduce((a) => a + 1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -190,7 +200,6 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -325,7 +334,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });

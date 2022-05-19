@@ -2,6 +2,7 @@
 
 const { slice } = require("cheerio/lib/api/traversing");
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -27,7 +28,11 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
+
   return starWarsArr.sort((a, b) => b.height - a.height);
+
+  return starWarsArr.sort((a,b) => b.height - a.height);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +71,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
+
+  for(let i =0; i < str.length + 1; i++) {
+    result.push(str.slice(i));
+  }
 
   return result;
 };
@@ -126,7 +135,14 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(ingredient => {
+    let noAmount = ingredient.slice(ingredient.indexOf(' ') + 1);
+    let noUnit = noAmount.slice(noAmount.indexOf(` `) + 1);
+    result.push(noUnit);
+  })
+
+
+
   return result;
 };
 

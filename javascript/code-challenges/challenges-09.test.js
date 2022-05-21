@@ -122,6 +122,10 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   houses.push(arr.map(value => value.house));
+  // from code challenge
+  /* arr.forEach(person => {
+    houses.push(person.house); */
+  })
   return houses;
 };
 
@@ -138,8 +142,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // let children = Object.values(arr, character);
-  // return children;
+  let children = 0;
+  arr.forEach(person => {
+    if (person.name === character) {
+      Object.keys(person).forEach((key, idx) => {
+        if (key === 'children') {
+          children = Object.value(person)[idx].length;
+        }
+      });
+    }
+
+  });
 
 };
 

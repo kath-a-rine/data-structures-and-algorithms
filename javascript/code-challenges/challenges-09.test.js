@@ -27,7 +27,6 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 const getCourseKeys = (obj) => {
   let keys = Object.keys(obj);
   return keys;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,10 +36,14 @@ Write a function named checkValues that takes in an object and a value and retur
 
 
 ------------------------------------------------------------------------------------------------ */
-//only passes one of two tests
+
 const checkValues = (obj, value) => {
-  let check = new RegExp(value);
-  return check.test(obj);
+  let val = Object.values(obj);
+  if (val.includes(value)) {
+    return true;
+  } else if ( val !== obj) {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,9 +66,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Object.entries(obj);
-  // return obj;
+ let keys = [];
 };
+
 
 
 
@@ -118,10 +121,9 @@ const characters = [
   },
 ];
 
-//returns expected array, unsure how to format to pass test
 const getHouses = (arr) => {
   let houses = [];
-  houses.push(arr.map(value => value.house));
+  arr.map(object => houses.push(object.house));
   return houses;
 };
 
@@ -138,10 +140,19 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // let children = Object.values(arr, character);
-  // return children;
-
+  // let children = 0;
+  // arr.forEach(person => {
+  //   if(person.name === character) {
+  //     Object.keys(person).forEach((key, idx) => {
+  //       if (key === 'children') {
+  //         children = Object.value(person)[idx].length;
+  //       }
+  //     });
+  //   }
+  // });
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

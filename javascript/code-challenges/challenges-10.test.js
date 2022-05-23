@@ -34,7 +34,10 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  
+  let maxNum = [];
+  for (let i in matrix[0]) {
+    
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -79,8 +82,17 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
+  // from code review
+  let totals = [];
+  for (let i in stores[0]) {
+    let hourlyTotal =0;
 
+    for (let j in stores) {
+      hourlyTotal += stores[j][i];
+    }
+    totals.push(hourlyTotal);
+  }
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------

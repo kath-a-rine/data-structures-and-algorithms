@@ -34,10 +34,9 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  let maxNum = [];
-  for (let i in matrix[0]) {
-    
-  }
+  let newMatrixOne = matrix[0].concat(matrix[1]);
+  let newMatrixTwo = newMatrixOne.concat(matrix[2]);
+  return Math.max(...newMatrixTwo);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +54,10 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  // for (let i in matrix) {
+  //   let sum = matrix[i].reduce((a, b) => a + b, 0);
+  //   return sum;
+  // }
 };
 
 

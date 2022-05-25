@@ -19,12 +19,8 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-  // let newArr = [];
-  // let keys = Object.keys(obj);
-  // let val = Object.values(obj);
-
-  // return newArr;
-}
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -37,7 +33,9 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  return input.filter(value => value.filter === target).length;
+  // let fiveCount = input.map(value => value.filter === target).length;
+  // console.log(fiveCount);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -50,7 +48,8 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  let sum = input.reduce()
+  
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,6 +69,7 @@ const divisibleByFiveTwoToThePower = (input) => {
   return input.map(row => {
     return row.filter(cell => typeof cell === 'number' && cell % 5 === 0).map(cell => Math.pow(2, cell));
   });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,6 +147,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 let findShortest = (data) => {
   let find = data.sort((a, b) => a.height - b.height);
   return find[0].name;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

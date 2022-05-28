@@ -22,7 +22,7 @@ function transformToLis(obj){
   let newArr = [];
   Object.entries(obj).forEach(item => newArr.push(`<li>${item[0]}: ${item[1]}</li>`));
   return newArr;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,8 +35,13 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  let fiveCount = input.map(value => value.filter === target).length;
-  console.log(fiveCount);
+  let fiveCount = 0;
+  input.map(value => value.map(value => {
+    if (value === target) {
+      fiveCount++;
+    }
+  }));
+  return fiveCount;
 };
 
 /* ------------------------------------------------------------------------------------------------

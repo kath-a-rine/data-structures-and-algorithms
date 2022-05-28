@@ -54,10 +54,13 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // for (let i in matrix) {
-  //   let sum = matrix[i].reduce((a, b) => a + b, 0);
-  //   return sum;
-  // }
+  let sum = 0;
+  matrix.map(array => {
+    array.map(num => {
+      sum += num;
+    });
+  });
+  return sum;
 };
 
 
@@ -109,6 +112,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------

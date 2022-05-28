@@ -19,7 +19,9 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-  // Solution code here...
+  let newArr = [];
+  Object.entries(obj).forEach(item => newArr.push(`<li>${item[0]}: ${item[1]}</li>`));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,8 +35,8 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // let fiveCount = input.map(value => value.filter === target).length;
-  // console.log(fiveCount);
+  let fiveCount = input.map(value => value.filter === target).length;
+  console.log(fiveCount);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,8 +50,9 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  
-  // Solution code here...
+  let totalSum = 0;
+  input.forEach(sum => totalSum += sum.reduce((a, b) => a + b));
+  return totalSum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,6 +139,10 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let maleAndFemale = [];
+  data.forEach(gen => gen.gender === 'male' || gen.gender === 'female' ?
+    maleAndFemale.push(gen.name) : maleAndFemale);
+  return maleAndFemale.join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------

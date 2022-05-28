@@ -49,7 +49,7 @@ const checkValues = (obj, value) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this:
+You are given an object with names and their corresponding phone numbers that looks like this:
 {
   'Grace Hopper': '222-303-5938',
   'Ada Lovelace': '222-349-9842',
@@ -66,7 +66,14 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
- let keys = [];
+  let newArr = [];
+  let keyArr = Object.keys(obj);
+  let valArr = Object.values(obj);
+  for (let i = 0; i < keyArr.length; i++) {
+    let str = `${keyArr[i]}: ${valArr[i]}`;
+    newArr.push(str);
+  }
+  return newArr;
 };
 
 
@@ -140,16 +147,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // let children = 0;
-  // arr.forEach(person => {
-  //   if(person.name === character) {
-  //     Object.keys(person).forEach((key, idx) => {
-  //       if (key === 'children') {
-  //         children = Object.value(person)[idx].length;
-  //       }
-  //     });
-  //   }
-  // });
+  let children = 0;
+  arr.forEach(person => {
+    if(person.name === character) {
+      Object.keys(person).forEach((key, idx) => {
+        if (key === 'children') {
+          children = Object.values(person)[idx].length;
+        }
+      });
+    }
+  });
+  return children ? true : false;
 };
 
 

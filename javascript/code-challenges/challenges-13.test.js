@@ -7,7 +7,15 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// Solution code here...
+  let index = -1;
+  let tempLongest = 0;
+  arr.forEach((str, idx) => {
+    if (str.length > tempLongest){
+      tempLongest = str.length;
+      index = idx;
+    }
+  });
+  return index;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,7 +27,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-
+  return arr.map(a => a.charAt(0));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +51,12 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  return arr.map(a => {
+    let areaCode = a.substring(1, 4);
+    let mid = a.substring(6, 9);
+    let end = a.substring(10);
+    return areaCode + mid + end;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +68,9 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-
+  let arr = str.split('');
+  let res = arr.filter((elem, idx) => idx % 2 === 1);
+  return res.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------

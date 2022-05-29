@@ -11,8 +11,8 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  // Solution code here...
-  //^[D,M][a-z]*.
+  let screen = /^(Mr|Mrs|Ms|Dr)\.\s[a-zA-Z]+/;
+  return arr.filter(str => screen.test(str));
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,7 +24,9 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-
+  return arr.map(str => {
+    return str.charAt(0).toUpperCase() + str.substr(1);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,6 +101,16 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
+  const luke = arr.find(char => char.name = 'Luke Skywalker');
+  return arr
+    .filter(char => parseInt(char.mass) > parseInt(luke.mass))
+    .reduce((str, currentChar, i, arr) => {
+      i === arr.length - 1
+        ? str += currentChar.name
+        : str += currentChar.name + ' - ';
+
+      return str;
+    }, '');
 
 };
 
@@ -117,7 +129,18 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    let valOne = a[property];
+    let valTwo = b[property];
+
+    if (valOne < valTwo) {
+      return -1;
+    } else if (valOne > valTwo){
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -157,6 +180,23 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let help = (set) => {
+    return set.every(cell => cell !== '' && cell === set[0])
+      ? true : false;
+  };
+
+  if (help(board[0])) return true;
+  if (help(board[1])) return true;
+  if (help(board[2])) return true;
+
+  if (help([board[0][0], board[1][0], board[2][0]])) return true;
+  if (help([board[0][1], board[1][1], board[2][1]])) return true;
+  if (help([board[0][2], board[1][2], board[2][2]])) return true;
+
+  if (help([board[0][0], board[1][1], board[2][2]])) return true;
+  if (help([board[0][2], board[1][1], board[2][0]])) return true;
+
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------

@@ -14,7 +14,17 @@ class LinkedList {
     this.head = null;
   }
 
-  // add - from class demo
+  // traverse - from demo
+  traverse() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
+    console.log('done traversing');
+  }
+
+  // add
   add(value){
     const node = new Node(value);
     if(!this.head){
@@ -39,9 +49,13 @@ class LinkedList {
   //includes - returns boolean
   includes(value) {
     let current = this.head;
-    while (current !== null) {
-      if (this.current === value)
+
+    while (current) {
+      if (this.current === value) {
         return true;
+      } else if (this.current !== value) {
+        current = current.next;
+      }
     }
     return false;
   }
@@ -51,6 +65,11 @@ class LinkedList {
     let current = this.head;
     let linkedListString = '';
 
+    while(current) {
+      linkedListString += `{${current.value}} ->`;
+      current = current.next;
+    }
+    linkedListString += 'NULL';
     return linkedListString;
   }
 }

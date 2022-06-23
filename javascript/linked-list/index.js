@@ -1,6 +1,5 @@
 'use strict';
 
-const { kMaxLength } = require('buffer');
 const { link } = require('fs');
 
 class Node {
@@ -95,6 +94,11 @@ class LinkedList {
   kthFromTheEnd(k){
     let current = this.head;
     let lastNode = this.length;
+
+  }
+
+  //CC8 - zip lists
+  zipLists(listOne, listTwo){
 
   }
 }

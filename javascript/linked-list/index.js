@@ -24,7 +24,7 @@ class LinkedList {
     console.log('done traversing');
   }
 
-  //insert
+  //insert - prepend
   insert(value) {
     let newNode = new Node(value);
     newNode.next = this.head;
@@ -52,7 +52,7 @@ class LinkedList {
     let linkedListString = '';
 
     while (current) {
-      linkedListString += `{${current.value}} ->`;
+      linkedListString += `{ ${current.value} } -> `;
       current = current.next;
     }
     linkedListString += 'NULL';
@@ -79,6 +79,8 @@ class LinkedList {
   insertBefore(value, newValue) {
     const current = this.head;
     let newNode = new Node(newValue);
+
+
 
   }
 
@@ -112,4 +114,7 @@ linkedList.add('b');
 linkedList.add('c');
 linkedList.add('d');
 
-module.exports = LinkedList;
+module.exports = {
+  LinkedList,
+  Node,
+};

@@ -74,57 +74,83 @@ describe('Linked List', () => {
   });
 
   // Code Challenge 6
-  // Can successfully add a node to the end of the linked list
-  // Can successfully add multiple nodes to the end of a linked list
-  // Can successfully insert a node before a node located i the middle of a linked list
-  // Can successfully insert a node before the first node of a linked list
-  // Can successfully insert after a node in the middle of the linked list
-  // Can successfully insert a node after the last node of the linked list
+
+  it('Can successfully add a node to the end of the linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+    let result = list.add(4);
+    expect(result).toEqual(4);
+  });
+
+  it('Can successfully add multiple nodes to the end of a linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+    list.add(4).add(5);
+    expect().toEqual();
+  });
+  //
+
+  it('Can successfully insert a node before a node located in the middle of a linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+    list.add(4);
+    list.add(5);
+
+    list.insertBefore(3, 6);
+    expect().toEqual();
+  });
+  //
+
+  it('Can successfully insert a node before the first node of a linked list', () => {
+    const list = new LinkedList;
+    list.add(2);
+    list.add(3);
+    list.add(4);
+
+    list.insert(1);
+    expect(list.head).toEqual(1);
+  });
+
+  //
+  it('Can successfully insert after a node in the middle of the linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+    list.add(4);
+
+    list.insertAfter(2, 7);
+    expect(list).toEqual('1, 2, 7, 3, 4');
+  });
+
+  //
+  it('Can successfully insert a node after the last node of the linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+    list.add(4);
+    expect(current.head.next.next.next).toEqual(4);
+  });
 
   //Code Challenge 7
-  test('k = the length of the linked list', async () => {
-    let linkedList = new LinkedList();
-    linkedList.add(1);
-    linkedList.add(2);
-    linkedList.add(3);
-    linkedList.add(4);
-    linkedList.kthFromEnd(4);
-    expect().toBeEqual();
+  it('Where k is greater than the length of the linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
 
-  });
-
-  test('Where k is not a positive integer', async () => {
-    let linkedList = new LinkedList();
-    linkedList.add(1);
-    linkedList.add(2);
-    linkedList.add(3);
-    linkedList.add(4);
-    linkedList.kthFromEnd(-2);
-    expect().toBeEqual();
-
-  });
-
-  test('Where the linked list is of a size 1', async () => {
-    let linkedList = new LinkedList();
-    linkedList.add(1);
-    linkedList.kthFromEnd(0);
-    expect().toBeEqual();
-
-  });
-
-  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', async () => {
-    let linkedList = new LinkedList();
-    linkedList.add(1);
-    linkedList.add(2);
-    linkedList.add(3);
-    linkedList.add(4);
-    linkedList.kthFromEnd(2);
-    expect().toBeEqual();
-
-  });
-
-    let result = list.kthFromTheEnd(2);
-    expect(result).toEqual(2);
+    let result = list.kthFromTheEnd(4);
+    expect(result).toEqual(null);
   });
 
   it('Where k and the length of the list are the same', () => {
@@ -135,7 +161,6 @@ describe('Linked List', () => {
 
     let result = list.kthFromTheEnd(3);
     expect(result).toEqual(1);
-
   });
 
   it('Where k is not a positive integer', () => {

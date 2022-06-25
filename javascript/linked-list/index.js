@@ -1,5 +1,6 @@
 'use strict';
 
+const { kMaxLength } = require('buffer');
 const { link } = require('fs');
 
 class Node {
@@ -87,9 +88,17 @@ class LinkedList {
   insertAfter(value, newValue) {
     let current = this.head;
     let newNode = new Node(newValue);
-    
+
+  }
+  // CC7 - kth from the end
+
+  kthFromTheEnd(k){
+    let current = this.head;
+    let lastNode = this.length;
+
   }
 }
+
 
 let linkedList = new LinkedList();
 

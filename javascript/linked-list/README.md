@@ -1,4 +1,4 @@
-# Singly Linked List/Linked List Insertions
+# Singly Linked List/Linked List Insertions/k-th value
 <!-- Short summary or background information -->
 
 
@@ -8,6 +8,8 @@
 CC5 -
 
 CC6 - Extend a Linked List to allow various insertion methods.
+
+CC7 - extending an implementation
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->

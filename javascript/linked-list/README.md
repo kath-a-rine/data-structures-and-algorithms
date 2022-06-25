@@ -1,9 +1,7 @@
 # Singly Linked List/Linked List Insertions/k-th value/zipped-lists
-<!-- Short summary or background information -->
 
 
 ## Challenge
-<!-- Description of the challenge -->
 
 Code Challenge 5 -
 
@@ -40,6 +38,6 @@ CC8 - zip two linked lists
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-I reviewed demo code, class notes, and the lecture to complete this assignment.
+I reviewed demo code, class notes, and the lecture to complete these assignments.
 
 ## API

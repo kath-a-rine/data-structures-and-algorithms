@@ -59,7 +59,7 @@ class LinkedList {
     return linkedListString;
   }
 
-  // CC6 - add
+  // CC6 - add - append
   add(value) {
     const node = new Node(value);
     if (!this.head) {
@@ -75,21 +75,36 @@ class LinkedList {
 
 
   //CC6 - Insert Before - adds a new node with the given new value immediately before the first node that has the value specified
-
+  // Referred to stackoverflow for help: https://stackoverflow.com/questions/6824067/manual-linked-list-insert-before-method
   insertBefore(value, newValue) {
+    let current = this.head;
+    while(current.next !== null){
+      if(current.next.value === value){
+        let newNode = new Node(newValue);
+        newNode.next = current.next;
+        current.value = newNode;
+        return;
+      }
+      return current = current.next;
+    }
   }
-
-
-
 
 
   //CC6 - Insert After - adds a new node with the given new value immediately after the first node that has the value specified
 
+
   insertAfter(value, newValue) {
     let current = this.head;
-    let newNode = new Node(newValue);
+    while(current.next !== null){
+      if(current.next.value === value){
+        let newNode = new Node(newValue);
+        newNode = current.next;
+        current.next = newNode;
+        return;
+      }
+      return current = current.next;
 
-
+    }
 
   }
   // CC7 - kth from the end

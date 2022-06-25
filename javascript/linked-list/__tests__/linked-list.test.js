@@ -81,13 +81,53 @@ describe('Linked List', () => {
   // Can successfully insert after a node in the middle of the linked list
   // Can successfully insert a node after the last node of the linked list
 
-  //Code Challenge 7
-  // Where k is greater than the length of the linked list
-  // Where k and the length of the list are the same
-  // Where k is not a positive integer
-  // Where the linked list is of a size 1
-  // “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+  // Code Challenge 7
+  it('Where k is greater than the length of the linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
 
+    let result = list.kthFromTheEnd(2);
+    expect(result).toEqual(2);
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+    let result = list.kthFromTheEnd(3);
+    expect(result).toEqual(1);
+
+  });
+
+  it('Where k is not a positive integer', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+  });
+
+  it('Where the linked list is of a size 1', () => {
+    const list = new LinkedList;
+    list.add(1);
+
+    let result = 
+
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const list = new LinkedList;
+    list.add(1);
+    list.add(2);
+    list.add(3);
+
+  });
+
+  //Code Challenge 8
   it('CC8 - zips two lists', () => {
     const listOne = new LinkedList;
     listOne.add(1);

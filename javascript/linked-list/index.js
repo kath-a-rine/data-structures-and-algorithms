@@ -1,6 +1,5 @@
 'use strict';
 
-const { kMaxLength } = require('buffer');
 const { link } = require('fs');
 
 class Node {
@@ -25,7 +24,7 @@ class LinkedList {
     console.log('done traversing');
   }
 
-  //insert
+  //insert - prepend
   insert(value) {
     let newNode = new Node(value);
     newNode.next = this.head;
@@ -53,7 +52,7 @@ class LinkedList {
     let linkedListString = '';
 
     while (current) {
-      linkedListString += `{${current.value}} ->`;
+      linkedListString += `{ ${current.value} } -> `;
       current = current.next;
     }
     linkedListString += 'NULL';
@@ -81,6 +80,8 @@ class LinkedList {
     const current = this.head;
     let newNode = new Node(newValue);
 
+
+
   }
 
   //CC6 - Insert After - adds a new node with the given new value immediately after the first node that has the value specified
@@ -97,6 +98,11 @@ class LinkedList {
     let lastNode = this.length;
 
   }
+
+  //CC8 - zip lists
+  zipLists(listOne, listTwo){
+
+  }
 }
 
 
@@ -108,4 +114,7 @@ linkedList.add('b');
 linkedList.add('c');
 linkedList.add('d');
 
-module.exports = LinkedList;
+module.exports = {
+  LinkedList,
+  Node,
+};

@@ -1,6 +1,7 @@
 'use strict';
 
 const { link } = require('fs');
+const node = require('verbose');
 
 class Node {
   constructor(value) {
@@ -77,8 +78,9 @@ class LinkedList {
   //CC6 - Insert Before - adds a new node with the given new value immediately before the first node that has the value specified
 
   insertBefore(value, newValue) {
-    const current = this.head;
-    let newNode = new Node(newValue);
+ 
+
+    }
 
 
 
@@ -90,13 +92,25 @@ class LinkedList {
     let current = this.head;
     let newNode = new Node(newValue);
 
+
+
   }
   // CC7 - kth from the end
 
   kthFromTheEnd(k){
     let current = this.head;
-    let lastNode = this.length;
-
+    let nodeCount = 0;
+    while(current){
+      current = current.next;
+      nodeCount++;
+      return nodeCount;
+    }
+    let kNode = nodeCount - k;
+    if(current.next === kNode){
+      return current.next.value;
+    } else {
+      current = current.next;
+    }
   }
 
   //CC8 - zip lists

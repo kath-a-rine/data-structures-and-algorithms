@@ -37,7 +37,7 @@ Write the following method for the Linked List class:
 CC8 - zip two linked lists
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-I reviewed demo code, class notes, and the lecture to complete these assignments.
+
+I reviewed demo code, class notes, and the lecture to complete these assignments. Big O was considered throughout.
 
 ## API

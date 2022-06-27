@@ -37,13 +37,13 @@ class LinkedList {
     let current = this.head;
 
     while (current) {
-      if (this.current === value) {
+      if (current.value === value) {
         return true;
-      } else if (this.current !== value) {
+      } else {
         current = current.next;
+        return false;
       }
     }
-    return false;
   }
 
   //to string - returns string representing all values

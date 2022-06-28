@@ -53,6 +53,20 @@ Using a Linked List as the underlying data storage mechanism, implement both a S
     - Arguments: none
     - Returns: Boolean indicating whether or not the queue is empty
 
+### Code Challenge 11: Implement a Queue using two Stacks
+
+- Create a new class called pseudo queue.
+  - Do not use an existing Queue.
+  - Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+  - Internally, utilize 2 Stack instances to create and manage the queue
+- Methods:
+  - enqueue
+    - Arguments: value
+    - Inserts value into the PseudoQueue, using a first-in, first-out approach.
+  - dequeue
+    - Arguments: none
+    - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
 ## Approach & Efficiency
 
 CC10: for this code challenge I reviewed the reading and referred to the demo code from lecture. I started with writing my tests first.

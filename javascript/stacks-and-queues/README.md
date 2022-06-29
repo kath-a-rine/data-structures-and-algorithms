@@ -53,6 +53,31 @@ Using a Linked List as the underlying data storage mechanism, implement both a S
     - Arguments: none
     - Returns: Boolean indicating whether or not the queue is empty
 
+### Code Challenge 11: Implement a Queue using two Stacks
+
+- Create a new class called pseudo queue.
+  - Do not use an existing Queue.
+  - Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+  - Internally, utilize 2 Stack instances to create and manage the queue
+- Methods:
+  - enqueue
+    - Arguments: value
+    - Inserts value into the PseudoQueue, using a first-in, first-out approach.
+  - dequeue
+    - Arguments: none
+    - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+### Animal Shelter
+
+- Create a class called AnimalShelter which holds only dogs and cats.
+- The shelter operates using a first-in, first-out approach.
+- Implement the following methods:
+  - enqueue
+    -Arguments: animal - animal can be either a dog or a cat object.
+  - dequeue
+    - Arguments: pref - pref can be either "dog" or "cat"
+    - Return: either a dog or a cat, based on preference. - If pref is not "dog" or "cat" then return null.
+
 ## Approach & Efficiency
 
 CC10: for this code challenge I reviewed the reading and referred to the demo code from lecture. I started with writing my tests first.

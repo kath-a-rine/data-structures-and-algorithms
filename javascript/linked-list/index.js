@@ -79,20 +79,17 @@ class LinkedList {
   insertBefore(value, newValue) {
     let current = this.head;
     while(current.next !== null){
-      if(current.next.value === value){
-        let newNode = new Node(newValue);
-        newNode.next = current.next;
-        current.value = newNode;
-        return;
-      }
-      return current = current.next;
+    if (current.next.value === value) {
+      let newNode = new Node(newValue);
+      newNode.next = current.next;
+      current = newNode;
+      return;
     }
+    return current;
+
   }
 
-
   //CC6 - Insert After - adds a new node with the given new value immediately after the first node that has the value specified
-
-
   insertAfter(value, newValue) {
     let current = this.head;
     while(current.next !== null){
@@ -108,7 +105,6 @@ class LinkedList {
 
   }
   // CC7 - kth from the end
-
   kthFromTheEnd(k){
     let current = this.head;
     let nodeCount = 0;

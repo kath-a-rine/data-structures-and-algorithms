@@ -105,7 +105,7 @@ describe('Linked List', () => {
     list.add(5);
 
     list.insertBefore(3, 6);
-    expect().toEqual();
+    expect(list.head.next.next.value).toEqual(6);
   });
   //
 
@@ -171,12 +171,12 @@ describe('Linked List', () => {
 
   });
 
-  it('Where the linked list is of a size 1', () => {
-    const list = new LinkedList;
-    list.add(1);
+  // it('Where the linked list is of a size 1', () => {
+  //   const list = new LinkedList;
+  //   list.add(1);
 
-    let result =
-  });
+  //   let result =
+  // });
 
   it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
     const list = new LinkedList;

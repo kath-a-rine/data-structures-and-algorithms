@@ -51,14 +51,25 @@ class BinaryTree{
   }
 
   maxValue(){
-    let currentNode = this.node.data;
-    let leftNode = this.maxValue(this.node.left);
-    let rightNode = this.maxValue(this.node.right);
+    // let currentNode = this.node.data;
+    // let leftNode = this.maxValue(this.node.left);
+    // let rightNode = this.maxValue(this.node.right);
 
-    if (leftNode > currentNode) currentNode = leftNode;
-    if (rightNode > currentNode) currentNode = rightNode;
-    return currentNode;
+    // if (leftNode > currentNode) currentNode = leftNode;
+    // if (rightNode > currentNode) currentNode = rightNode;
+    // return currentNode;
+
+    let maxValue = this.root.value;
+
+    const traverse = node => {
+      if(node.value > maxValue) maxValue = node.value;
+      if(node.left) traverse(node.left);
+      if(node.right) traverse(node.right);
+    };
+    traverse(this.root);
+    return maxValue;
   }
+
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -88,3 +99,19 @@ class BinarySearchTree extends BinaryTree {
     return //boolean
   }
 }
+
+let tree = new BinaryTree();
+tree.root = new Node(10);
+tree.root.left = new Node(5);
+tree.root.right = new Node(15);
+tree.root.left.left = new Node(1);
+tree.root.left.right = new Node(8);
+tree.root.right.right = new Node(20);
+
+let preOrder = tree.preOrder();
+let inOrder = tree.inOrder();
+let postOrder = tree.postOrder();
+
+console.log('preOrder:', preOrder);
+console.log('inOrder:', inOrder);
+console.log('postOrder:', postOrder);

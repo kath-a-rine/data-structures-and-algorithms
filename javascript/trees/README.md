@@ -6,7 +6,10 @@ Code Challenge 15:
 
 Code Challenge 16:
 
-Code Challenge 17: Write
+- Code Challenge 17: Write a function called breadth first
+  - Arguments: tree
+  - Return: list of all values in the tree, in the order they were encountered
+  
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 

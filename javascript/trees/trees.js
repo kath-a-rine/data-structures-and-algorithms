@@ -132,3 +132,10 @@ let postOrder = tree.postOrder();
 console.log('preOrder:', preOrder);
 console.log('inOrder:', inOrder);
 console.log('postOrder:', postOrder);
+
+module.exports = {
+  Queue,
+  BinaryTree,
+  BinarySearchTree,
+  Node
+};

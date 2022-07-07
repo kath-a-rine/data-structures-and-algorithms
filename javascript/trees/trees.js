@@ -1,5 +1,7 @@
 'use strict';
 
+const Queue = require('../stacks-and-queues/stack-and-queue');
+
 class Node {
   constructor(value){
     this.value = value;
@@ -70,6 +72,21 @@ class BinaryTree{
     return maxValue;
   }
 
+  breadthFirst(tree){
+    let arr = [];
+    let queue = new Queue();
+    let current = tree.root;
+    queue.enqueue(current);
+
+    while(!queue.isEmpty()){
+      let front = queue.dequeue(current);
+      arr.push(front.value);
+      if(current.left) queue.enqueue(current.left);
+      if(current.right) queue.enqueue(current.right);
+    }
+    return arr;
+  }
+
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -115,3 +132,10 @@ let postOrder = tree.postOrder();
 console.log('preOrder:', preOrder);
 console.log('inOrder:', inOrder);
 console.log('postOrder:', postOrder);
+
+module.exports = {
+  Queue,
+  BinaryTree,
+  BinarySearchTree,
+  Node
+};

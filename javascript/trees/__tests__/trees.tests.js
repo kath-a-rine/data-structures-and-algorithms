@@ -72,4 +72,18 @@ describe('Breadth First Tests', () => {
 
     expect(result).toEqual([1, 2, 3, 4, 5, 6, 7]);
   });
+
+  // Code Challenge 18 - Fizz Buzz Tree
+  test('For a binary tree - determine if each node is divisible by 3', () => {
+    let tree = new BinaryTree();
+    tree.root = new Node(2);
+    tree.root.left = new Node(4);
+    tree.root.right = new Node(6);
+
+    let newTree = fizzBuzzTree(tree);
+
+    expect(newTree.root.value).toEqual(2);
+    expect(tree.root.left.value).toEqual(4);
+    expect(tree.root.right.value).toEqual('Fizz');
+  });
 });

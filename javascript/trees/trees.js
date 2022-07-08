@@ -87,6 +87,19 @@ class BinaryTree{
     return arr;
   }
 
+  fizzBuzzTree(tree){
+    const traverse = node => {
+      if(node.value%3 === 0) node.value = 'Fizz';
+      if(node.value%5 === 0) node.value = 'Buzz';
+      if(node.value%5 === 0 && node.value%3 === 0) node.value = 'FizzBuzz';
+      if(node.value%5 !== 0 || node.value%3 !== 0) node.value = 'value';
+      if(node.left) traverse(node.left);
+      if(node.right) traverse(node.right);
+    };
+    traverse(this.root);
+    return tree;
+  }
+
 }
 
 class BinarySearchTree extends BinaryTree {

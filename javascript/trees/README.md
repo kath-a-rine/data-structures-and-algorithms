@@ -21,5 +21,4 @@ CC 17: For this challenge I reviewed our Trees reading and attended the afternoo
 
 CC18: For this challenge I reviewed our Trees reading and earlier traversal code. This method uses O(n) in time and space.
 
-## API
-<!-- Description of each method publicly available in each of your trees -->
+## Whiteboard Process

@@ -13,3 +13,7 @@ function insertionSort(arr) {
     arr[j+1] = temp;
   }
 }
+
+insertionSort(arr);
+
+module.exports = insertionSort;

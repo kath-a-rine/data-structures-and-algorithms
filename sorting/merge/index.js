@@ -3,7 +3,7 @@
 function mergeSort(arr){
   let n = arr.length;
   if(n >1){
-    let mid = n/2;
+    let mid = Math.floor(n/2);
     let left = arr[0, mid];
     let right = arr[mid, n];
 
@@ -36,7 +36,4 @@ function merge(left, right, arr){
   }
 };
 
-module.exports = {
-  mergeSort,
-  merge,
-}
+module.exports = mergeSort;

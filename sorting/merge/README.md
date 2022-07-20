@@ -38,7 +38,7 @@ ALGORITHM Merge(left, right, arr)
 
 Given this pseudocode we can visualize the functions in the following diagram:
 
-![merge sort diagram](/cc27-diagram.png)
+![merge sort diagram](./cc27-diagram.png)
 
 ## Code
 

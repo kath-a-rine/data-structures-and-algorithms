@@ -13,3 +13,7 @@
 - [Linked List Insertions](./javascript/linked-list/README.md)
 - [kth Value](./javascript/linked-list/README.md)
 - [Zipped Lists](./javascript/linked-list/README.md)
+
+- [Sorting - Insertion](./sorting/insertion/README.md)
+- [Merge Sort](./sorting/merge/README.md)
+- [Quick Sort](./sorting/quick/README.md)

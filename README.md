@@ -17,3 +17,5 @@
 - [Sorting - Insertion](./sorting/insertion/README.md)
 - [Merge Sort](./sorting/merge/README.md)
 - [Quick Sort](./sorting/quick/README.md)
+
+- [Hash Tables](./javascript/hash-tables/README.md)

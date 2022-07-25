@@ -33,28 +33,72 @@ describe('Binary Tree Tests', () => {
   test('Can successfully return a collection from a preorder traversal', () => {
     let tree = new BinaryTree();
     tree.root = new Node(1);
+    tree.root.left = new Node(2);
+    tree.root.right = new Node(3);
+    tree.root.left.left = new Node (4);
+    tree.root.left.right = new Node(5);
+    tree.root.right.left = new Node(6);
+    tree.root.right.right = new Node(7);
+    let preOrder = tree.preOrder();
 
+    expect(preOrder).toEqual([1, 2, 4, 5, 3, 6, 7]);
   });
 
   test('Can successfully return a collection from an inorder traversal', () => {
     let tree = new BinaryTree();
     tree.root = new Node(1);
+    tree.root.left = new Node(2);
+    tree.root.right = new Node(3);
+    tree.root.left.left = new Node (4);
+    tree.root.left.right = new Node(5);
+    tree.root.right.left = new Node(6);
+    tree.root.right.right = new Node(7);
+    let inOrder = tree.inOrder();
 
-    expect(tree.root).toEqual(1);
+    expect(inOrder).toEqual([4, 2, 5, 1, 6, 3, 7]);
   });
 
   test(' Can successfully return a collection from a postorder traversal', () => {
     let tree = new BinaryTree();
+    tree.root = new Node(1);
+    tree.root.left = new Node(2);
+    tree.root.right = new Node(3);
+    tree.root.left.left = new Node (4);
+    tree.root.left.right = new Node(5);
+    tree.root.right.left = new Node(6);
+    tree.root.right.right = new Node(7);
+    let postOrder = tree.postOrder();
+
+    expect(postOrder).toEqual([4, 5, 2, 6, 7, 3, 1]);
 
   });
 
   test('Returns true	false for the contains method, given an existing or non-existing node value', () => {
-    let tree = new BinaryTree();
+    let tree = new BinarySearchTree();
+    tree.root = new Node(1);
+    let containsTrue = tree.contains(1);
+    let containsFalse = tree.contains(2);
 
+    expect(containsTrue).toBeTruthy;
+    expect(containsFalse).toBeFalsy;
   });
 });
 
 // Code Challenge 16 - Max Value
+
+test('Can return max value of a binary tree', () => {
+  let tree = new BinaryTree();
+  tree.root = new Node(1);
+  tree.root.left = new Node(2);
+  tree.root.right = new Node(3);
+  tree.root.left.left = new Node (4);
+  tree.root.left.right = new Node(5);
+  tree.root.right.left = new Node(6);
+  tree.root.right.right = new Node(7);
+  let maxValue = tree.maxValue();
+
+  expect(maxValue).toEqual(7);
+});
 
 // Code Challenge 17 - Breadth First
 describe('Breadth First Tests', () => {

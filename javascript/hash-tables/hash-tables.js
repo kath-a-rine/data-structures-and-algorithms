@@ -74,8 +74,28 @@ class HashTable {
   repeatedWord(string){
     let splitString = string.split('');
     for(let i = 0; i < splitString.length; i++){
-      
+
     };
+  }
+
+  leftJoin(hashOne, hashTwo){
+    let finalArr = [];
+    if(hashOne.buckets){
+      let value = hashOne.get(key); // unsure how to pull out key from hashtable for use in get method
+      let newArr = new Array();
+      newArr.push(key, value);
+      finalArr.push(newArr);
+    }
+    for(let i = 0; i < finalArr.length; i ++){
+      let bool = hashTwo.contains(finalArr[i][0]);
+      if(bool === true){
+        let value = hashTwo.get(key);
+        finalArr[i].push(value);
+      } else {
+        finalArr[i].push(null);
+      }
+    }
+    return finalArr;
   }
 }
 

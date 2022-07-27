@@ -1,7 +1,6 @@
 # Hashtables
 
-
-## Challenge
+## Challenge 30
 
 Implement a Hashtable Class with the following methods:
 
@@ -23,4 +22,8 @@ Implement a Hashtable Class with the following methods:
   - Returns: Index in the collection for that key
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Challenge 31
+
+- Write a function called repeated word that finds the first word to occur more than once in a string
+ - Arguments: string

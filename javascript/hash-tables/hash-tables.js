@@ -70,6 +70,13 @@ class HashTable {
     }
     return keyArr;
   }
+
+  repeatedWord(string){
+    let splitString = string.split('');
+    for(let i = 0; i < splitString.length; i++){
+      
+    };
+  }
 }
 
 let table = new HashTable(1024);

@@ -34,7 +34,7 @@ class Graph {
   }
 
   getNeighbors(vertex){
-
+    return [...this.adjacencyList.get(vertex)];
   }
 
   size(){
@@ -96,21 +96,23 @@ class Graph {
 //from demo
 const graph = new Graph();
 
-const A = graph.addVertex('A');
-const B = graph.addVertex('B');
-const D = graph.addVertex('D');
-const C = graph.addVertex('C');
-const E = graph.addVertex('E');
-const F = graph.addVertex('F');
-const G = graph.addVertex('G');
-const H = graph.addVertex('H');
+const A = graph.addNode('A');
+const B = graph.addNode('B');
+const D = graph.addNode('D');
+const C = graph.addNode('C');
+const E = graph.addNode('E');
+const F = graph.addNode('F');
+const G = graph.addNode('G');
+const H = graph.addNode('H');
 
-graph.addDirectedEdge(A, B);
-graph.addDirectedEdge(A, D);
-graph.addDirectedEdge(A, C);
-graph.addDirectedEdge(B, G);
-graph.addDirectedEdge(D, F);
-graph.addDirectedEdge(D, H);
-graph.addDirectedEdge(F, H);
-graph.addDirectedEdge(C, H);
-graph.addDirectedEdge(F, E);
+graph.addEdge(A, B);
+graph.addEdge(A, D);
+graph.addEdge(A, C);
+graph.addEdge(B, G);
+graph.addEdge(D, F);
+graph.addEdge(D, H);
+graph.addEdge(F, H);
+graph.addEdge(C, H);
+graph.addEdge(F, E);
+
+console.log(graph.adjacencyList);

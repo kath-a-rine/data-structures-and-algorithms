@@ -1,5 +1,7 @@
 # Graphs
-<!-- Short summary or background information -->
+
+Code Challenge 37 Algorithm
+![cc 37 whiteboard](./cc37.png)
 
 ## Challenge
 

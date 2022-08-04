@@ -19,3 +19,5 @@
 - [Quick Sort](./sorting/quick/README.md)
 
 - [Hash Tables](./javascript/hash-tables/README.md)
+
+- [Graphs](./javascript/graph/README.md)

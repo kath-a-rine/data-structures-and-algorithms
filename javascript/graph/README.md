@@ -3,6 +3,9 @@
 Code Challenge 37 Algorithm
 ![cc 37 whiteboard](./cc37.png)
 
+Code Challenge 38
+![cc38](./cc38.png)
+
 ## Challenge
 
 Implement your own Graph. The graph should be represented as an adjacency list, and should include the following methods:
